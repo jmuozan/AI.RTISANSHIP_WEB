@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI.RTISANSHIP</title>
+    <link rel="stylesheet" href="./AIRTISANSHIP.css">
+</head>
+<body>
+    <a href="https://jmuozan.github.io/jorgemunyozz.github.io/" class="home-link">MORE ABOUT ME</a>
+    <header>
+        <div class="header-content">
+            <p class="subheader">Preserving Tradition in the Digital Age: Revolutionizing Craftsmanship Education</p>
+            <h1>AI.RTISANSHIP (WIP)</h1>
+        </div>
+    </header>
+    <main>
+        <img id="main-image" src="../../IMG/MDEF/1-HERO.gif" alt="Image">
+    </main>
+    <section class="info-section">
+        <div class="info-left">
+            <p><strong>YEAR</strong>2024</p>
+            <p><strong>KIND</strong>INDIVIDUAL</p>
+            <p><strong>CATEGORY</strong>RESEARCH</p>
+            <p><strong>FUNCTION</strong>DESIGN PROTOTYPING, CODING</p>
+        </div>
+        <div class="info-right">
+            <p>In today's quickly evolving world, the preservation of traditional craftsmanship stands at a critical crossroads. This project aims to globalize and modernize the transmission of ancient craftsmanship knowledge through AI. Its primary mission is safeguarding cultural heritage and providing invaluable educational resources for future generations.</p>
+        </div>
+    </section>
+    <section class="custom-photography-section">
+        <div class="text-content">
+            <h2>CAN A NEW EDUCATION BE POSSIBLE???</h2>
+            <p>The project uses machine learning and deep learning techniques to carefully study and recreate the different movements of artisans. This technology is used to create a strong digital educational platform. It's made for art and design students, educators, and researchers, providing an immersive way to explore traditional crafts.</p>
+            <p>The work recognizes what modern learners and educators need. It meets the call for learning that's accessible, engaging, and forward-looking, while also preserving traditional crafts. By using AI to capture and teach the details of these crafts, the project preserves cultural heritage and encourages people to innovate with this ancient knowledge in today's world.</p>
+        </div>
+        <div class="image-content">
+            <img src="../../IMG/MDEF/2-HERO.gif" alt="Custom Photography">
+        </div>
+    </section>
+    <section class="interactive-gallery">
+        <div class="big-image">
+            <img id="big-image" src="../../IMG/MDEF/3-HERO.gif" alt="Big Image">
+        </div>
+        <div class="thumbnail-gallery">
+            <img class="thumbnail selected" src="../../IMG/MDEF/3-HERO.gif" alt="Thumb 1" onclick="changeImage(this, '../../IMG/MDEF/3-HERO.gif')">
+            <img class="thumbnail" src="../../IMG/MDEF/4-HERO.gif" alt="Thumb 2" onclick="changeImage(this, '../../IMG/MDEF/4-HERO.gif')">
+            <img class="thumbnail" src="../../IMG/MDEF/5-ME.gif" alt="Thumb 3" onclick="changeImage(this, '../../IMG/MDEF/5-ME.gif')">
+            <img class="thumbnail" src="../../IMG/MDEF/6-ME.gif" alt="Thumb 4" onclick="changeImage(this, '../../IMG/MDEF/6-ME.gif')">
+        </div>
+        <div class="text-content">
+            <h2>FOUNDATIONS OF THE RESEARCH</h2>
+            <p>At the heart of the project lie four foundational pillars guiding its mission: technological innovation, utilizing AI to capture and teach traditional craftsmanship techniques with precision; cultural preservation, ensuring the safeguarding and perpetuation of artisanal skills against the threat of time and the consumer society; educational engagement, looking to get a dynamic and interactive learning experience that triggers creativity and curiosity in both students and educators and global connectivity connecting artisans, learners, and educators worldwide, creating a united community committed to preserving and advancing traditional craftsmanship for future generations.</p>
+        </div>
+    </section>
+    <section class="video-section">
+        <div class="responsive-video-wrapper">
+            <iframe src="https://www.youtube.com/embed/wOGg_3rsgEc?si=yRD2AQ2L40XNmEB5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>    
+    
+    <section class="text-image-layout">
+        <div class="text-image-layout-content">
+            <img src="../../IMG/MDEF/7-HERO.gif" alt="LAST">
+        </div>
+        <div class="text-content-right">
+            <h2>GLOBAL KNOWLEDGE</h2>
+            <p>This project in continuously adapting to the changing digital world, trying to revolutionize the way craftsmanship is taught by merging historical methods with modern advancements. The digital platform preserves and teaches ancient skills, celebrating cultural heritage while promoting innovation. The initiative supports "global knowledge, local production," encouraging collaborations among artisans, educators, and learners all over the world. This approach might help local traditions thrive by integrating global insights and technology. The project's goal is to ensure traditional craftsmanship thrives globally, supported by technology and a commitment to preserving culture and providing quality education.</p>
+        </div>
+    </section>
+    <div id="hover-image" class="hover-image">
+        <img src="../../IMG/MDEF/8-NEXT-SLOW_FURNITURE.png" alt="Small Image">
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            const image = document.getElementById('main-image');
+            setTimeout(() => {
+                image.style.transform = 'scale(1)'; // Reduce to normal size
+            }, 500); // Delay for the effect
+        });
+
+        function changeImage(element, src) {
+            const bigImage = document.getElementById('big-image');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+
+            // Remove the selected class from all thumbnails
+            thumbnails.forEach(thumbnail => {
+                thumbnail.classList.remove('selected');
+            });
+
+            // Add the selected class to the clicked thumbnail
+            element.classList.add('selected');
+
+            bigImage.classList.add('fade-out');
+            setTimeout(() => {
+                bigImage.src = src;
+                bigImage.classList.remove('fade-out');
+                bigImage.classList.add('fade-in');
+            }, 300);
+            setTimeout(() => {
+                bigImage.classList.remove('fade-in');
+            }, 600);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hoverImage = document.getElementById('hover-image');
+            const caseHeader = document.querySelector('.case-header');
+            const caseImageWrapper = document.querySelector('.case-image-wrapper');
+
+            function showHoverImage(e) {
+                hoverImage.style.display = 'block';
+                hoverImage.style.left = `${e.pageX + 15}px`;
+                hoverImage.style.top = `${e.pageY + 15}px`;
+            }
+
+            function hideHoverImage() {
+                hoverImage.style.display = 'none';
+            }
+
+            function moveHoverImage(e) {
+                hoverImage.style.left = `${e.pageX + 15}px`;
+                hoverImage.style.top = `${e.pageY + 15}px`;
+            }
+
+            caseHeader.addEventListener('mouseover', showHoverImage);
+            caseHeader.addEventListener('mousemove', moveHoverImage);
+            caseHeader.addEventListener('mouseout', hideHoverImage);
+
+            caseImageWrapper.addEventListener('mouseover', showHoverImage);
+            caseImageWrapper.addEventListener('mousemove', moveHoverImage);
+            caseImageWrapper.addEventListener('mouseout', hideHoverImage);
+
+            caseHeader.addEventListener('click', () => {
+                window.location.href = './slow_furniture.html';
+            });
+
+            caseImageWrapper.addEventListener('click', () => {
+                window.location.href = './slow_furniture.html';
+            });
+        });
+    </script>
+</body>
+</html>
